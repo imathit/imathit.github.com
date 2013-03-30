@@ -9,7 +9,7 @@
 
 </head>
 <body>
-  <h1> iMathIt Leaderboard</h1>
+  <h1> iMathIt Leaderboard (Medium)</h1>
 <table id="leaderboardTable"> </table>
 <a href="./"> Return to homepage</a>
 
@@ -17,7 +17,7 @@
   var LEADERBOARD_SIZE = 10;
 
   
-  var scoreListRef = new Firebase('https://imathit.firebaseIO.com//scoreList');
+  var scoreListRef = new Firebase('https://imathit.firebaseIO.com//HighScoresMedium');
 
   // Keep a mapping of firebase locations to HTML elements, so we can move / remove elements as necessary.
   var htmlForPath = {};
@@ -26,7 +26,7 @@
   var tableHeader = $("<tr/>");
   tableHeader.append($("<td/>").append($("<em/>").text("NAME")));
   tableHeader.append($("<td/>").append($("<em/>").text("SCORE")));
-  tableHeader.append($("<td/>").append($("<em/>").text("DIFFICULTY")));
+  // tableHeader.append($("<td/>").append($("<em/>").text("DIFFICULTY")));
   $("table#leaderboardTable").append(tableHeader);
 
 
@@ -36,8 +36,7 @@
     newScoreRow.append($("<td/>").append($("<em/>").text(scoreSnapshot.val().id)));
     newScoreRow.append($("<td/>").text(scoreSnapshot.val().score));
 
-    //parse 
-    newScoreRow.append($("<td/>").text(scoreSnapshot.val().difficulty));
+    // newScoreRow.append($("<td/>").text(scoreSnapshot.val().difficulty));
 
     // Store a reference to the table row so we can get it again later.
     htmlForPath[scoreSnapshot.name()] = newScoreRow;
