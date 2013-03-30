@@ -48,6 +48,7 @@
       var lowerScoreRow = htmlForPath[prevScoreName];
       lowerScoreRow.before(newScoreRow);
     }
+    $(newScoreRow).effect("highlight",{},2000);
   }
 
   // Create a view to only receive callbacks for the last LEADERBOARD_SIZE scores
