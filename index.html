@@ -38,8 +38,8 @@
               <ul class="nav">
                 <li class="active"><a href="#">Home</a></li>
                 <!--li><a href="#about">About</a></li-->
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact">Subscribe for updates</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#subscription_modal">Subscribe for updates</a></li>
+                <li><a href="#">Contact</a></li>
                 
                 
                 
@@ -49,9 +49,9 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">HIGHSCORES <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="leaderBoard_easy">Easy</a></li>
-                    <li><a href="leaderBoard_medium">Medium</a></li>
-                    <li><a href="leaderBoard_hard">Hard</a></li>
+                    <li><a target="_blank" href="leaderBoard_easy">Easy</a></li>
+                    <li><a target="_blank" href="leaderBoard_medium">Medium</a></li>
+                    <li><a target="_blank" href="leaderBoard_hard">Hard</a></li>
                     <li class="divider"></li>
                     <li class="nav-header">Administrator</li>
                     <li><a href="#">Login</a></li>
@@ -92,7 +92,7 @@
               <p class="lead"> 
                 iMathIt would be launching soon in the appstore. Subscribe below to keep updated with our progress :)
 </p>
-              <a class="btn btn-large btn-primary" href="#">Subscribe</a>
+              <a class="btn btn-large btn-success" data-toggle="modal" data-target="#subscription_modal" href="#">Stay tuned!</a>
             </div>
           </div>
         </div>
@@ -102,6 +102,25 @@
     </div><!-- /.carousel -->
 
 
+<div id="subscription_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <!--div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <!--h3 id="myModalLabel">iMathIt subscription</h3>
+  </div-->
+
+  <div class="modal-body">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <form class="form-signin">
+        <h3 class="form-signin-heading">Stay tuned with updates on iMathIt.</h3>
+        <input name="name" type="text" class="input-block-level" placeholder="Name">
+        <input name="email" type="email" class="input-block-level" placeholder="Email address">
+      </form>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-medium btn-success" type="submit">SubScribe</button>
+  </div>
+</div>
   
 
     <div class="container marketing">
@@ -158,7 +177,7 @@
       </div>
 
       <hr class="featurette-divider">
-        <h2 class="featurette-heading">More features coming soon...  <a class="btn btn-large btn-primary" href="#">Stay updated</a></h2>
+        <h2 class="featurette-heading">More features coming soon...  <a class="btn btn-large btn-success" data-toggle="modal" data-target="#subscription_modal" href="#">Stay tuned!</a></h2>
       <div class="featurette">
         
         <p class="lead"></p>
