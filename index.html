@@ -218,6 +218,7 @@
 
     <script>
       $("form#subscribe_form").submit(function(){
+          console.log("prevent default loading");
           return false;
       });
 
@@ -225,7 +226,10 @@
           var name = $("input#subscriber_name").val();
           var email = $("input#subscriber_email").val();
 
-          $.post("http://www.cuchapter.com/imathit.php", { name: name, email: email, subscribing:1 } );
+          $.post("http://www.cuchapter.com/imathit.php", { name: name, email: email, subscribing:1 }).done(
+            function(data){
+               $("#subscription_modal").modal('hide');
+            });
       });
       //$.post("test.php", { name: "John", time: "2pm" } );
 
