@@ -110,15 +110,18 @@
 
   <div class="modal-body">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <form class="form-signin">
+    <form id="subscribe_form" class="form-signin" action="http://www.cuchapter.com/imathit.php">
         <h3 class="form-signin-heading">Stay tuned with updates on iMathIt.</h3>
-        <input name="name" type="text" class="input-block-level" placeholder="Name">
-        <input name="email" type="email" class="input-block-level" placeholder="Email address">
-      </form>
+        <input id="subscriber_name" name="name" type="text" class="input-block-level" placeholder="Name">
+        <input id="subscriber_email"name="email" type="email" class="input-block-level" placeholder="Email address">
+        <input name="subscribing" type="hidden" class="input-block-level" value="1">
+     
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <button class="btn btn-medium btn-success" type="submit">SubScribe</button>
+    <button class="btn btn-medium btn-success" id="subscribe" type="submit">SubScribe</button>
+    </form> 
+    
   </div>
 </div>
   
@@ -214,6 +217,18 @@
     <!--script src="javascripts/scale.fix.js"></script-->
 
     <script>
+      $("form#subscribe_form").submit(function(){
+          return false;
+      });
+
+      $("#subscribe").click(function(){
+          var name = $("input#subscriber_name").val();
+          var email = $("input#subscriber_email").val();
+
+          $.post("http://www.cuchapter.com/imathit.php", { name: name, email: email, subscribing:1 } );
+      });
+      //$.post("test.php", { name: "John", time: "2pm" } );
+
       /**$(function() {
           $('#yournav').bind('click', 'ul li a', function(event) {
               $.scrollTo(event.target.hash, 250);
