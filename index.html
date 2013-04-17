@@ -5,44 +5,202 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>imathit</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/custom_style.css" rel="stylesheet" media="screen">
+
   </head>
+
+
   <body>
-    <center><h1>iMathit</h1> <!--button onClick="document.location='leaderBoard_easy';">View HighScores</button--></center>
-      <center>
-    <iframe src='http://embed.verite.co/timeline/?source=0Ajp70DtYR0BQdFMyLS04YjZxd3JwZ3U4Q2dYbnFadnc&font=Bevan-PotanoSans&maptype=toner&lang=en&height=650' width='100%' height='650' frameborder='0'></iframe>
-     </center>
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+    
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <!--li><a href="#about">About</a></li-->
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Subscribe for updates</a></li>
+                
+                
+                
+              </ul>
+
+              <ul class="nav pull-right">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">HIGHSCORES <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="leaderBoard_easy">Easy</a></li>
+                    <li><a href="leaderBoard_medium">Medium</a></li>
+                    <li><a href="leaderBoard_hard">Hard</a></li>
+                    <li class="divider"></li>
+                    <li class="nav-header">Administrator</li>
+                    <li><a href="#">Login</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
 
 
 
-    <!--div class="wrapper"-->
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img id="carousel_bg" src="img/slide-03.jpg" alt="">
 
-      <!--header>
+          <div class="container">
+            
+            <div class="carousel-caption">
+              
+              <h1> <img src="img/imathit_logo.png" width=90>  iMathIt</h1>
+              <p class="lead"><br />A joint collaboration between Carleton University and Lisgar Collegiate Institute of Ottawa for making math practice fun and interactive. <br /><a class="btn btn-large btn-primary" href="#start_feature">Features</a></p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img id="carousel_bg" src="img/slide-02.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Coming to the appstore</h1>
+              <p class="lead"> 
+                iMathIt would be launching soon in the appstore. Subscribe below to keep updated with our progress :)
+</p>
+              <a class="btn btn-large btn-primary" href="#">Subscribe</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+
+
+  
+
+    <div class="container marketing">
+
+      <div class="alert alert-info">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h2>iMathIt construction in progress...</h2>
+  <div class="progress progress-striped active">
+                  <div class="bar" style="width: 40%;"></div>
+                </div>
+  </div>
+
+      <!--div class="row">
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140">
+          <h2>Heading</h2>
+          <p> </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+      </div--><!-- /.row -->
+
+
+      <!-- THE FEATURETTES -->
+
+      <hr id="start_feature" class="featurette-divider">
+
+      <div class="featurette">
+
+        <h2 class="featurette-heading">Tutorial mode <!--span class="muted">It'll blow your mind.</span--></h2>
+
+        <img class="featurette-image pull-right" width=240 src="img/imathit_trig_tutorial.png">
+        <img class="featurette-image pull-right" width=265 src="img/tutorial_wolframAlpha.png">
+
+        <p class="lead"> It makes use of interactive visuals through which the students can experience a new and fun way of learning the course material. <br />
+        Through an upward swipe gesture from the bottom of the screen, the user is also able to access more information and important formulas on the topic. WolframAlpha has also been integrated to provide the user with more information on the topic. 
+         </p>
+
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" width=240 src="img/challenge.png">
+        <h2 class="featurette-heading">Timed Challenges. <span class="muted">Speed and understanding to the test</span></h2>
+        <p class="lead">Students can excersize their knowledge and undeterstand of various topics such as trigonometry and algebra</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" width=240 src="img/challenge_Peek.png">
+        <h2 class="featurette-heading">Peek </h2>
+        <p class="lead">We have also added a feature that lets user glance through the list of questions in the middle of a challenge. They simply need to slide the current view away using the peek button located on the top left corner of the challenge display. With this, users enjoy the flexibility of being able to jump between different questions in a challenge.</p>
+      </div>
+
+      <hr class="featurette-divider">
+        <h2 class="featurette-heading">More features coming soon...  <a class="btn btn-large btn-primary" href="#">Stay updated</a></h2>
+      <div class="featurette">
         
-        <img src="./images/imathit.png"> <center><button onClick="document.location='leaderBoard_easy';">View HighScores</button></center>
-      </header>
-      <section>
-          <center><p class="highlight"><span class="gr">SITE IS UNDER CONSTRUCTION!</span></p></center>
-      </section>
-      <section>
-        <h1><center>imathit</center></h1>
-        
-        <hr>A University-School Collaboration for Making Math Practice Fun using Apps.  </hr>
-        <br><br><br>
-        <p>Contact us: <b>info@imathit.com</b></p>
+        <p class="lead"></p>
+      </div>
 
-        <footer>
-          <p><center><small> App developers: Osazuwa - Jan - Saranagan - Sagar </small></center></p>
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2013 App developers: <a target="_blank" href="http://www.linkedin.com/pub/sarangan-balasubramaniam/49/343/40a">Sarangan</a> &middot; <a target="_blank" href="http://www.linkedin.com/in/oomigie">Zuwa</a> &middot; <a target="_blank" href="http://www.linkedin.com/pub/jan-mikhail/36/225/370">Jan</a> &middot; <a target="_blank" href="http://www.linkedin.com/pub/sagar-suneja/53/53/856">Sagar</a></p>
       </footer>
-      </section-->
 
-    <!--/div-->
-    <script src="javascripts/scale.fix.js"></script>
+    </div><!-- /.container -->
+
+    <!--script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.3/jquery.scrollTo.min.js"></script-->
+    
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="javascripts/jquery.scroll.min.js"></script>
+    <script src="javascripts/bootstrap-transition.js"></script>
+    <script src="javascripts/bootstrap-alert.js"></script>
+    <script src="javascripts/bootstrap-modal.js"></script>
+    <script src="javascripts/bootstrap-dropdown.js"></script>
+    <script src="javascripts/bootstrap-scrollspy.js"></script>
+    <script src="javascripts/bootstrap-tab.js"></script>
+    <script src="javascripts/bootstrap-tooltip.js"></script>
+    <script src="javascripts/bootstrap-popover.js"></script>
+    <script src="javascripts/bootstrap-button.js"></script>
+    <script src="javascripts/bootstrap-collapse.js"></script>
+    <script src="javascripts/bootstrap-carousel.js"></script>
+    <script src="javascripts/bootstrap-typeahead.js"></script>
+    <!--script src="javascripts/scale.fix.js"></script-->
+
+    <script>
+      /**$(function() {
+          $('#yournav').bind('click', 'ul li a', function(event) {
+              $.scrollTo(event.target.hash, 250);
+          });
+      });**/
+</script>
     
   </body>
 </html>
