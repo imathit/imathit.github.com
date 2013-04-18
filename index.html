@@ -110,15 +110,20 @@
 
   <div class="modal-body">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <form id="subscribe_form" class="form-signin" action="http://www.cuchapter.com/imathit.php">
+    <!--form id="subscribe_form" class="form-signin" action="http://www.cuchapter.com/imathit.php">
         <h3 class="form-signin-heading">Stay tuned with updates on iMathIt.</h3>
         <input id="subscriber_name" name="name" type="text" class="input-block-level" placeholder="Name">
         <input id="subscriber_email"name="email" type="email" class="input-block-level" placeholder="Email address">
-        <input name="subscribing" type="hidden" class="input-block-level" value="1">
-     
+        <input name="subscribing" type="hidden" class="input-block-level" value="1"-->
+
+        <form class="form-signin" action="http://imathit.createsend.com/t/t/s/ajrhj/" method="post" id="subForm">
+          <h3 class="form-signin-heading">Stay tuned with updates on iMathIt.</h3>
+<input class="input-block-level" type="text" placeholder="Name" name="cm-name" id="name" /> <br />
+<input class="input-block-level" type="text" placeholder="Email address" name="cm-ajrhj-ajrhj" id="ajrhj-ajrhj" />
+
   </div>
   <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button> 
     <button class="btn btn-medium btn-success" id="subscribe" type="submit">SubScribe</button>
     </form> 
     
@@ -217,21 +222,25 @@
     <!--script src="javascripts/scale.fix.js"></script-->
 
     <script>
-      $("form#subscribe_form").submit(function(){
-          console.log("prevent default loading");
-          return false;
-      });
+      // $("form#subscribe_form").submit(function(){
+      //     console.log("prevent default loading");
+      //     return false;
+      // });
 
-      $("#subscribe").click(function(){
-          var name = $("input#subscriber_name").val();
-          var email = $("input#subscriber_email").val();
+      $("#subscribe").click(
+        function(){
+        //   var name = $("input#subscriber_name").val();
+        //   var email = $("input#subscriber_email").val();
+        //   var data = jQuery.parseJSON("{ name:" + name + ", email:" + email + ", subscribing:1 }");
 
-          $.post("http://www.cuchapter.com/imathit.php", { name: name, email: email, subscribing:1 }).done(
-            function(data){
-               $("#subscription_modal").modal('hide');
-            });
+        //   $.post("http://www.cuchapter.com/imathit.php",data).done(
+        //     function(data){
+        //        $("#subscription_modal").modal('hide');
+        //     });
+        // },"json"
+        $("#subscription_modal").modal('hide');
+
       });
-      //$.post("test.php", { name: "John", time: "2pm" } );
 
       /**$(function() {
           $('#yournav').bind('click', 'ul li a', function(event) {
