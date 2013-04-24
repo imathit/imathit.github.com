@@ -65,7 +65,7 @@
       </div> <!-- /.container -->
     </div><!-- /.navbar-wrapper -->
 
-
+    
 
     <!-- Carousel
     ================================================== -->
@@ -110,12 +110,6 @@
 
   <div class="modal-body">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <!--form id="subscribe_form" class="form-signin" action="http://www.cuchapter.com/imathit.php">
-        <h3 class="form-signin-heading">Stay tuned with updates on iMathIt.</h3>
-        <input id="subscriber_name" name="name" type="text" class="input-block-level" placeholder="Name">
-        <input id="subscriber_email"name="email" type="email" class="input-block-level" placeholder="Email address">
-        <input name="subscribing" type="hidden" class="input-block-level" value="1"-->
-
         <form class="form-signin" action="http://imathit.createsend.com/t/t/s/ajrhj/" method="post" id="subForm">
           <h3 class="form-signin-heading">Stay tuned with updates on iMathIt.</h3>
 <input class="input-block-level" type="text" placeholder="Name" name="cm-name" id="name" /> <br />
@@ -222,22 +216,9 @@
     <!--script src="javascripts/scale.fix.js"></script-->
 
     <script>
-      // $("form#subscribe_form").submit(function(){
-      //     console.log("prevent default loading");
-      //     return false;
-      // });
 
       $("#subscribe").click(
         function(){
-        //   var name = $("input#subscriber_name").val();
-        //   var email = $("input#subscriber_email").val();
-        //   var data = jQuery.parseJSON("{ name:" + name + ", email:" + email + ", subscribing:1 }");
-
-        //   $.post("http://www.cuchapter.com/imathit.php",data).done(
-        //     function(data){
-        //        $("#subscription_modal").modal('hide');
-        //     });
-        // },"json"
         $("#subscription_modal").modal('hide');
 
       });
@@ -247,7 +228,15 @@
               $.scrollTo(event.target.hash, 250);
           });
       });**/
-</script>
-    
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-40392805-1', 'imathit.com');
+      ga('send', 'pageview');
+    </script>
+
   </body>
 </html>
